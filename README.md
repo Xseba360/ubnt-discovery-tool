@@ -105,6 +105,19 @@ If you want to build the app with all dependencies, run:
 
 This utility requires at least Java 9 if you want to use the FlatLaf UI. 
 
+## Releasing
+
+This repository includes a release workflow at `.github/workflows/release.yml`.
+
+To prepare and publish a new release:
+
+1. Ensure `version` in `build.gradle` matches the intended release version.
+2. Create and push a version tag prefixed with `v` (for example `v1.3.3`).
+3. The workflow builds release artifacts and creates a GitHub Release automatically.
+
+You can also run the same workflow manually from the GitHub Actions tab using the
+`workflow_dispatch` input fields (`tag` and optional `prerelease`).
+
 ## Getting Help
 
 * Add an issue on GitHub
